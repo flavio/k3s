@@ -5,6 +5,7 @@ go 1.16
 replace (
 	github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.22
 	github.com/benmoss/go-powershell => github.com/k3s-io/go-powershell v0.0.0-20201118222746-51f4c451fbd7
+	github.com/containerd/cgroups => github.com/containerd/cgroups v1.0.1
 	github.com/containerd/containerd => github.com/k3s-io/containerd v1.5.10-k3s1 // k3s-release/1.5
 	github.com/coreos/go-systemd => github.com/coreos/go-systemd v0.0.0-20190321100706-95778dfbb74e
 	github.com/docker/distribution => github.com/docker/distribution v2.7.1+incompatible
@@ -28,49 +29,49 @@ replace (
 	google.golang.org/genproto => google.golang.org/genproto v0.0.0-20210831024726-fe130286e0e2
 	google.golang.org/grpc => google.golang.org/grpc v1.40.0
 	gopkg.in/square/go-jose.v2 => gopkg.in/square/go-jose.v2 v2.2.2
-	k8s.io/api => github.com/k3s-io/kubernetes/staging/src/k8s.io/api v1.23.5-k3s1
-	k8s.io/apiextensions-apiserver => github.com/k3s-io/kubernetes/staging/src/k8s.io/apiextensions-apiserver v1.23.5-k3s1
-	k8s.io/apimachinery => github.com/k3s-io/kubernetes/staging/src/k8s.io/apimachinery v1.23.5-k3s1
-	k8s.io/apiserver => github.com/k3s-io/kubernetes/staging/src/k8s.io/apiserver v1.23.5-k3s1
-	k8s.io/cli-runtime => github.com/k3s-io/kubernetes/staging/src/k8s.io/cli-runtime v1.23.5-k3s1
-	k8s.io/client-go => github.com/k3s-io/kubernetes/staging/src/k8s.io/client-go v1.23.5-k3s1
-	k8s.io/cloud-provider => github.com/k3s-io/kubernetes/staging/src/k8s.io/cloud-provider v1.23.5-k3s1
-	k8s.io/cluster-bootstrap => github.com/k3s-io/kubernetes/staging/src/k8s.io/cluster-bootstrap v1.23.5-k3s1
-	k8s.io/code-generator => github.com/k3s-io/kubernetes/staging/src/k8s.io/code-generator v1.23.5-k3s1
-	k8s.io/component-base => github.com/k3s-io/kubernetes/staging/src/k8s.io/component-base v1.23.5-k3s1
-	k8s.io/component-helpers => github.com/k3s-io/kubernetes/staging/src/k8s.io/component-helpers v1.23.5-k3s1
-	k8s.io/controller-manager => github.com/k3s-io/kubernetes/staging/src/k8s.io/controller-manager v1.23.5-k3s1
-	k8s.io/cri-api => github.com/k3s-io/kubernetes/staging/src/k8s.io/cri-api v1.23.5-k3s1
-	k8s.io/csi-translation-lib => github.com/k3s-io/kubernetes/staging/src/k8s.io/csi-translation-lib v1.23.5-k3s1
+	k8s.io/api => github.com/flavio/kubernetes/staging/src/k8s.io/api v1.23.5-k3s1-kubewarden1
+	k8s.io/apiextensions-apiserver => github.com/flavio/kubernetes/staging/src/k8s.io/apiextensions-apiserver v1.23.5-k3s1-kubewarden1
+	k8s.io/apimachinery => github.com/flavio/kubernetes/staging/src/k8s.io/apimachinery v1.23.5-k3s1-kubewarden1
+	k8s.io/apiserver => github.com/flavio/kubernetes/staging/src/k8s.io/apiserver v1.23.5-k3s1-kubewarden1
+	k8s.io/cli-runtime => github.com/flavio/kubernetes/staging/src/k8s.io/cli-runtime v1.23.5-k3s1-kubewarden1
+	k8s.io/client-go => github.com/flavio/kubernetes/staging/src/k8s.io/client-go v1.23.5-k3s1-kubewarden1
+	k8s.io/cloud-provider => github.com/flavio/kubernetes/staging/src/k8s.io/cloud-provider v1.23.5-k3s1-kubewarden1
+	k8s.io/cluster-bootstrap => github.com/flavio/kubernetes/staging/src/k8s.io/cluster-bootstrap v1.23.5-k3s1-kubewarden1
+	k8s.io/code-generator => github.com/flavio/kubernetes/staging/src/k8s.io/code-generator v1.23.5-k3s1-kubewarden1
+	k8s.io/component-base => github.com/flavio/kubernetes/staging/src/k8s.io/component-base v1.23.5-k3s1-kubewarden1
+	k8s.io/component-helpers => github.com/flavio/kubernetes/staging/src/k8s.io/component-helpers v1.23.5-k3s1-kubewarden1
+	k8s.io/controller-manager => github.com/flavio/kubernetes/staging/src/k8s.io/controller-manager v1.23.5-k3s1-kubewarden1
+	k8s.io/cri-api => github.com/flavio/kubernetes/staging/src/k8s.io/cri-api v1.23.5-k3s1-kubewarden1
+	k8s.io/csi-translation-lib => github.com/flavio/kubernetes/staging/src/k8s.io/csi-translation-lib v1.23.5-k3s1-kubewarden1
 	k8s.io/klog => github.com/k3s-io/klog v1.0.0-k3s2 // k3s-release-1.x
 	k8s.io/klog/v2 => github.com/k3s-io/klog/v2 v2.30.0-k3s1 // k3s-main
-	k8s.io/kube-aggregator => github.com/k3s-io/kubernetes/staging/src/k8s.io/kube-aggregator v1.23.5-k3s1
-	k8s.io/kube-controller-manager => github.com/k3s-io/kubernetes/staging/src/k8s.io/kube-controller-manager v1.23.5-k3s1
-	k8s.io/kube-proxy => github.com/k3s-io/kubernetes/staging/src/k8s.io/kube-proxy v1.23.5-k3s1
-	k8s.io/kube-scheduler => github.com/k3s-io/kubernetes/staging/src/k8s.io/kube-scheduler v1.23.5-k3s1
-	k8s.io/kubectl => github.com/k3s-io/kubernetes/staging/src/k8s.io/kubectl v1.23.5-k3s1
-	k8s.io/kubelet => github.com/k3s-io/kubernetes/staging/src/k8s.io/kubelet v1.23.5-k3s1
-	k8s.io/kubernetes => github.com/k3s-io/kubernetes v1.23.5-k3s1
-	k8s.io/legacy-cloud-providers => github.com/k3s-io/kubernetes/staging/src/k8s.io/legacy-cloud-providers v1.23.5-k3s1
-	k8s.io/metrics => github.com/k3s-io/kubernetes/staging/src/k8s.io/metrics v1.23.5-k3s1
-	k8s.io/mount-utils => github.com/k3s-io/kubernetes/staging/src/k8s.io/mount-utils v1.23.5-k3s1
-	k8s.io/node-api => github.com/k3s-io/kubernetes/staging/src/k8s.io/node-api v1.23.5-k3s1
-	k8s.io/pod-security-admission => github.com/k3s-io/kubernetes/staging/src/k8s.io/pod-security-admission v1.23.5-k3s1
-	k8s.io/sample-apiserver => github.com/k3s-io/kubernetes/staging/src/k8s.io/sample-apiserver v1.23.5-k3s1
-	k8s.io/sample-cli-plugin => github.com/k3s-io/kubernetes/staging/src/k8s.io/sample-cli-plugin v1.23.5-k3s1
-	k8s.io/sample-controller => github.com/k3s-io/kubernetes/staging/src/k8s.io/sample-controller v1.23.5-k3s1
+	k8s.io/kube-aggregator => github.com/flavio/kubernetes/staging/src/k8s.io/kube-aggregator v1.23.5-k3s1-kubewarden1
+	k8s.io/kube-controller-manager => github.com/flavio/kubernetes/staging/src/k8s.io/kube-controller-manager v1.23.5-k3s1-kubewarden1
+	k8s.io/kube-proxy => github.com/flavio/kubernetes/staging/src/k8s.io/kube-proxy v1.23.5-k3s1-kubewarden1
+	k8s.io/kube-scheduler => github.com/flavio/kubernetes/staging/src/k8s.io/kube-scheduler v1.23.5-k3s1-kubewarden1
+	k8s.io/kubectl => github.com/flavio/kubernetes/staging/src/k8s.io/kubectl v1.23.5-k3s1-kubewarden1
+	k8s.io/kubelet => github.com/flavio/kubernetes/staging/src/k8s.io/kubelet v1.23.5-k3s1-kubewarden1
+	k8s.io/kubernetes => github.com/flavio/kubernetes v1.23.5-k3s1-kubewarden1
+	k8s.io/legacy-cloud-providers => github.com/flavio/kubernetes/staging/src/k8s.io/legacy-cloud-providers v1.23.5-k3s1-kubewarden1
+	k8s.io/metrics => github.com/flavio/kubernetes/staging/src/k8s.io/metrics v1.23.5-k3s1-kubewarden1
+	k8s.io/mount-utils => github.com/flavio/kubernetes/staging/src/k8s.io/mount-utils v1.23.5-k3s1-kubewarden1
+	k8s.io/node-api => github.com/flavio/kubernetes/staging/src/k8s.io/node-api v1.23.5-k3s1-kubewarden1
+	k8s.io/pod-security-admission => github.com/flavio/kubernetes/staging/src/k8s.io/pod-security-admission v1.23.5-k3s1-kubewarden1
+	k8s.io/sample-apiserver => github.com/flavio/kubernetes/staging/src/k8s.io/sample-apiserver v1.23.5-k3s1-kubewarden1
+	k8s.io/sample-cli-plugin => github.com/flavio/kubernetes/staging/src/k8s.io/sample-cli-plugin v1.23.5-k3s1-kubewarden1
+	k8s.io/sample-controller => github.com/flavio/kubernetes/staging/src/k8s.io/sample-controller v1.23.5-k3s1-kubewarden1
 	mvdan.cc/unparam => mvdan.cc/unparam v0.0.0-20210104141923-aac4ce9116a7
 )
 
 require (
 	github.com/Microsoft/hcsshim v0.9.2
 	github.com/cloudnativelabs/kube-router v1.3.2
-	github.com/containerd/cgroups v1.0.1
+	github.com/containerd/cgroups v1.0.2
 	github.com/containerd/containerd v1.6.0-rc.1
 	github.com/containerd/fuse-overlayfs-snapshotter v1.0.4
 	github.com/containerd/stargz-snapshotter v0.11.0
 	github.com/coreos/go-systemd v0.0.0-20190719114852-fd7a80b32e1f
-	github.com/docker/docker v20.10.10+incompatible
+	github.com/docker/docker v20.10.11+incompatible
 	github.com/erikdubbelboer/gspt v0.0.0-20190125194910-e68493906b83
 	github.com/flannel-io/flannel v0.17.0
 	github.com/go-bindata/go-bindata v3.1.2+incompatible
@@ -112,7 +113,7 @@ require (
 	go.etcd.io/etcd/etcdutl/v3 v3.5.1
 	go.etcd.io/etcd/server/v3 v3.5.1
 	golang.org/x/crypto v0.0.0-20211202192323-5770296d904e
-	golang.org/x/net v0.0.0-20211209124913-491a49abca63
+	golang.org/x/net v0.0.0-20220107192237-5cfca573fb4d
 	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9
 	google.golang.org/grpc v1.44.0
 	gopkg.in/yaml.v2 v2.4.0
